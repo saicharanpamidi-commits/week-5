@@ -26,4 +26,4 @@ cython_debug/
 *.idea
 
 # project
-.env
+.env.venv/
