@@ -22,6 +22,7 @@ def load_data():
     """Load the Titanic data with clean column names."""
     return clean_column_names(pd.read_csv(URL))
 
+
 def survival_demographics():
     """Summarize survival by passenger class, sex and age group.
 
@@ -46,6 +47,7 @@ def survival_demographics():
 
     return table.sort_values(['pclass', 'sex', 'age_group'],
                              ignore_index=True)
+
 
 def visualize_demographic():
     """Bar chart of adult survival rate by passenger class and sex.
@@ -89,6 +91,7 @@ def visualize_demographic():
 
     return fig
 
+
 def family_groups():
     """Summarize ticket fares by family size and passenger class."""
     df = load_data()
@@ -117,6 +120,7 @@ def last_names():
     last_name = df['name'].str.split(',').str[0].str.strip()
 
     return last_name.value_counts()
+
 
 def visualize_families():
     """Plot the fare range for each family size, one panel per class.
